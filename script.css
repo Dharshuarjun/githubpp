@@ -1,0 +1,83 @@
+body{
+    background: rgb(216, 205, 205);
+}
+
+
+
+.container{
+    display:grid;
+    height:80vh;
+    grid-template-columns: 0.5fr 0.27fr 0.27fr 0.27fr;
+    grid-template-rows: 0.4fr 0.25fr 0.7fr 0.6fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "sidebar search search search"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+    grid-gap:5rem;
+    
+}
+nav{
+    background: rgb(74, 75, 118);
+    grid-area:nav;
+    border-radius: 10px;
+    color:white;
+    text-align: center;
+    padding:20px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+search{
+    background:rgb(43, 66, 55);
+    width:75%;
+    display:grid;
+    font-size: 20px;
+     grid-area:search;
+     border-radius: 10px;
+     color:rgb(187, 171, 171);
+     padding: 10px;
+     
+}
+.sidebar{
+    background: rgb(43, 66, 55);
+    width:75%;
+    grid-area:sidebar;
+    border-radius: 10px;
+}
+.content1{
+    background:rgb(43, 66, 55) ;
+    grid-area:content1;
+    border-radius: 10px;
+
+}
+.content2{
+    background:rgb(43, 66, 55);
+    grid-area: content2;
+    border-radius: 10px;
+}
+.content3{
+    background: rgb(43, 66, 55);
+    grid-area:content3;
+    border-radius: 10px;
+}
+footer{
+    background: rgb(43, 66, 55);
+    grid-area:footer;
+    border-radius: 10px;
+}
+@media only screen and (max-width:900px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows:0.5fr 0.5fr 2fr 2.2fr 1.2fr 1.2fr 0.5fr;
+        grid-template-areas: 
+        "nav"
+        "search"
+        "sidebar"
+        "content1"
+        "content2"
+        "content3"
+        "footer";
+    }
+}
+
